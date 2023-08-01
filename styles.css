@@ -6,24 +6,24 @@ body {
     margin: 0 auto;
     padding: 20px;
   }
-
+  
   h1 {
     text-align: center;
     margin-bottom: 20px;
   }
-
+  
   #game-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
+  
   #question {
     font-size: 18px;
     margin-bottom: 10px;
   }
-
+  
   #options button {
     display: block;
     width: 100%;
@@ -35,17 +35,17 @@ body {
     cursor: pointer;
     transition: background-color 0.2s;
   }
-
+  
   #options button:hover {
     background-color: #eaeaea;
   }
-
+  
   #result {
     font-size: 16px;
     margin-top: 20px;
     text-align: center;
   }
-
+  
   button {
     display: block;
     width: 100%;
@@ -58,7 +58,40 @@ body {
     font-size: 16px;
     transition: background-color 0.2s;
   }
-
+  
   button:hover {
     background-color: #0056b3;
   }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    #game-container {
+      padding: 10px;
+    }
+  
+    #question {
+      font-size: 16px;
+    }
+  
+    #options button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    #result {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  

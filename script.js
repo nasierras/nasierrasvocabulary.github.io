@@ -5,7 +5,29 @@ let correctAnswers = 0;
 let incorrectAnswers = 0;
 
 // Load CSV data and start the game
-fetch('vocabulary.csv')
+dataToLoad = parseInt(prompt("Choose topic to practice:\n   1. General\n   2. Gender\n   3. Animals\n   4. House\n   5. Connectors"));
+dataBase = '';
+dataBasePath = 'dataBases/';
+switch (dataToLoad) {
+    case 1:
+      dataBase = '01_General.csv';
+      break;
+    case 2:
+      dataBase = '02_Gender.csv';
+      break;
+    case 3:
+      dataBase = '03_Animals.csv';
+      break;
+    case 4:
+      dataBase = '04_House.csv';
+      break;
+    case 5:
+      dataBase = '05_Connectors.csv';
+      break;
+    default:
+      alert("Invalid input")
+  }
+  fetch(dataBasePath + dataBase)
   .then(response => response.text())
   .then(data => {
     vocabularyData = parseCSV(data);
